@@ -57,7 +57,7 @@ class BaseBootstrap implements BootstrapInterface
     {
 
         $className = get_class($this);
-        $namespace = explode(DIRECTORY_SEPARATOR, $className);
+        $namespace = explode('\\', $className);
         $n = count($namespace) - 1;
         $namespace[$n] = 'models';
         $this->_moduleName = $namespace[$n - 1];
